@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+
+    font-family: 'regular';
+}
+
+@font-face {
+    font-family: 'regular';
+    src: url(./fonts/Pixellari.ttf);
+}
+
+@font-face {
+    font-family: 'title';
+    src: url(./fonts/04B_30__.TTF);
+}
+
+:root {
+    --pink: #D27CB1;
+    --pink-dark: #764589;
+    --cyan: #61C9E2;
+    --cyan-dark: #5C6DB5;
+    --cyan-darker: #2B3354;
+    --gray: #345163;
+    --gray-dark: #1C2C35;
+    --yellow: #F0E43E;
+    --orange: #DE7227;
+
+    --debug: transparent;
+}
