@@ -30,17 +30,22 @@
 
 <div class="container">
     <div class="canvas">
-        <div class="platform p1">
-
-        </div>
+        <div class="platform p1" />
         <div class="platform p2" />
         <div class="platform p3" />
     
         <div class="tree t1" />
         <div class="tree t2" />
     
+        <div class="moon" />
+        
+        <div class="background b1" />
+        <div class="background b2" />
+        <div class="background b3" />
+        <div class="background b4" />
     </div>
-    <div class="moon" />
+
+
     <main>
         <article class="header">
             <!-- svelte-ignore a11y-missing-attribute -->
@@ -188,6 +193,51 @@
         font-size: 30px;
     }
 
+    .sponsors {
+        position: absolute;
+        width: 1050px;
+        height: 150px;
+
+        left: 0px;
+        bottom: 0px;
+
+        z-index: 8;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .sponsors .logo {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+    }
+
+    .logo.hy {
+        background-image: url(/img/hy-logo.png);
+    }
+
+    .logo.fgj {
+        width: 75px;
+        height: 75px;
+        background-image: url(/img/fgj-logo.png);
+    }
+
+    .logo.lukema {
+        width: 125px;
+        height: 125px;
+        background-image: url(/img/lukema-logo.png);
+    }
+
     .discord {
         position: absolute;
         width: 150px;
@@ -313,7 +363,7 @@
         width: 300px;
         height: 375px;
 
-        bottom: calc(200px + 190px);
+        bottom: calc(200px + 165px);
         left: calc(5% + 30%);
 
         z-index: 3;
@@ -338,51 +388,51 @@
         background-image: url(/img/moon.png);
     }
 
-    .sponsors {
+    .background {
         position: absolute;
-        width: 1000px;
-        height: 200px;
-
-        left: 0px;
-        bottom: 0px;
-
-        z-index: 8;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-
-        border: solid var(--debug);
-
-        flex-wrap: wrap;
-    }
-
-    .sponsors .logo {
-        width: 100px;
-        height: 100px;
-        margin: 20px;
-
-        background-position: center center;
+        background-position: bottom center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
 
+        bottom: 0;
     }
 
-    .logo.hy {
-        background-image: url(/img/hy-logo.png);
+    .background.b1 {
+        width: 1200px;
+        height: 900px;
+
+        background-image: url(/img/b1.png);
+
+        z-index: 1;
     }
 
-    .logo.fgj {
-        width: 75px;
-        height: 75px;
-        background-image: url(/img/fgj-logo.png);
+    .background.b2 {
+        width: 900px;
+        height: 750px;
+        left: -200px;
+
+        background-image: url(/img/b2.png);
+        z-index: 2;
     }
 
-    .logo.lukema {
-        width: 125px;
-        height: 125px;
-        background-image: url(/img/lukema-logo.png);
+    .background.b3 {
+        width: 1200px;
+        height: 1000px;
+
+        right: 0;
+
+        background-image: url(/img/b1.png);
+        z-index: 1;
+    }
+
+    .background.b4 {
+        width: 900px;
+        height: 750px;
+        left: 30%;
+
+        background-image: url(/img/b2.png);
+        background-position: bottom right;
+        z-index: 2;
     }
 
     @media screen and (max-width: 1250px) {
